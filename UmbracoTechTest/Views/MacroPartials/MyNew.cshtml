@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    var image = Model.MacroParameters["Image"];
+    var title = Model.MacroParameters["Title"].ToString();
+    var contentText = Model.MacroParameters["ContentText"].ToString();
+    var link = Model.MacroParameters["Link"].ToString();
+    var mediaItem = Umbraco.TypedMedia(image);
+    var url = mediaItem.Url;
+}
+
+<article class="brick entry format-standard">
+    
+    <div class="entry-text">
+        <div class="entry-header">
+            <h1 class="entry-title">
+                <a href="@link" style="color: black">@title</a>
+            </h1>
+        </div>
+        <div class="entry-thumb">
+            <a href="@link" class="thumb-link"><img src="@url"/></a>
+        </div>
+        <div class="entry-excerpt">
+            @contentText
+        </div>
+    </div>
+</article>

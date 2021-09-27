@@ -231,6 +231,7 @@
     <Content Include="images\escheresque_%402X.png" />
     <Content Include="images\icon-location%402x.png" />
     <Content Include="images\icon-location.png" />
+    <Content Include="images\leftArrow.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\mejs\controls.png" />
     <Content Include="images\mejs\controls.svg" />
@@ -1778,6 +1779,13 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Layout.cshtml" />
+    <Content Include="Views\MacroPartials\MyNew.cshtml" />
+    <Content Include="Views\News.cshtml" />
+    <Content Include="Views\AboutUs.cshtml" />
+    <Content Include="Views\NewItem.cshtml" />
+    <Content Include="Views\MacroPartials\ListNews.cshtml" />
+    <Content Include="Views\MacroPartials\PrimaryNews.cshtml" />
+    <Content Include="Views\MacroPartials\SecondaryNews.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

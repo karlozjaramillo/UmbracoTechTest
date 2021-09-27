@@ -2458,6 +2458,7 @@ header .logo a {
  *
  * ------------------------------------------------------------------- */
 footer {
+    background-color: dimgrey;
 	padding-top: 9rem;
 	padding-bottom: 3rem;
 	font-size: 1.5rem;
@@ -2496,7 +2497,7 @@ footer ul li {
 
 .footer-main ul a,
 .footer-main ul a:visited {
-	color: #8E8E8E;
+	color: white;
 	border: none;
 }
 

@@ -7,13 +7,13 @@
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en">
- <!--<![endif]-->
+<!--<![endif]-->
 <head>
 
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Abstract</title>
+    <title>Akademy – Umbraco Tech Test</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -51,14 +51,14 @@
         <div class="row header-content">
 
             <div class="logo">
-                <a href="index.html">Author</a>
+                <a href="/">Author</a>
             </div>
 
             <nav id="main-nav-wrap">
                 <ul class="main-navigation sf-menu">
-                    <li class="current"><a href="index.html" title="">Home</a></li>
-                    <li><a href="style-guide.html" title="">News</a></li>
-                    <li><a href="about.html" title="">About Us</a></li>
+                    <li class="current"><a href="/" title="">Home</a></li>
+                    <li><a href="/news/" title="">News</a></li>
+                    <li><a href="/about-us/" title="">About Us</a></li>
                 </ul>
             </nav> <!-- end main-nav-wrap -->
 
@@ -85,8 +85,9 @@
 
     </header> <!-- end header -->
 
-    @RenderBody()
-
+    <div style="margin: 30px 0">
+        @RenderBody()
+    </div>
     <!-- footer
        ================================================== -->
     <footer>
@@ -99,9 +100,9 @@
                     <h4>Site Links</h4>
 
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="/" class="whiteFont">Home</a></li>
+                        <li><a href="/news/">News</a></li>
+                        <li><a href="/about-us/">About Us</a></li>
                     </ul>
 
                 </div> <!-- end site-links -->
@@ -111,9 +112,9 @@
                     <h4>Social</h4>
 
                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">YouTube</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
                     </ul>
 
                 </div> <!-- end social links -->
@@ -122,17 +123,22 @@
 
                     <h4>Subscribe</h4>
 
-                    <p>Keep yourself updated. Subscribe to our newsletter.</p>
+                    <p style="color: white">Keep yourself updated. Subscribe to our newsletter.</p>
 
                     <div class="subscribe-form">
 
                         <form id="mc-form" class="group" novalidate="true">
 
-                            <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="Your email" required="">
+                            <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="Register your email" required="">
 
                             <input type="submit" name="subscribe">
 
                             <label for="mc-email" class="subscribe-message"></label>
+
+                            <div class="input-group mb-3" style="display: flex; align-items: baseline;">
+                                <input type="email" name="dEmail" class="form-control email" id="mc-email" placeholder="Register your email" aria-label="Recipient's username" aria-describedby="button-addon2" required="">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                            </div>
 
                         </form>
 
@@ -149,7 +155,7 @@
 
                 <div class="col-twelve">
                     <div class="copyright">
-                        <span>© Copyright | Newshore Akademy 2021</span>
+                        <span style="color: white">© Copyright | Newshore Akademy @DateTime.Now.Year</span>
                     </div>
 
                     <div id="go-top">
