@@ -27,7 +27,7 @@
 
             <a href="@item.Url"><img src="@mediaItem.Url" /></a>
             <span><a href="@item.Url"><h2>@item.Name</h2></a><em>by @author</em></span>
-            <div>@(Umbraco.Truncate(item.GetPropertyValue<string>("Summary"), 100)) <a href="@item.Url">Read More..</a></div>
+            <div>@(Umbraco.Truncate(item.GetPropertyValue<string>("Summary"), 100)) <a href="@item.Url">Read More...</a></div>
             <hr />
         }
     </ul>
