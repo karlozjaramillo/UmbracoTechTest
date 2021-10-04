@@ -75,7 +75,6 @@ C:\inetpub\wwwroot\UmbracoTechTest\UmbracoTechTest\UmbracoTechTest\bin\System.We
 C:\inetpub\wwwroot\UmbracoTechTest\UmbracoTechTest\UmbracoTechTest\bin\System.Web.WebPages.Razor.xml
 C:\inetpub\wwwroot\UmbracoTechTest\UmbracoTechTest\UmbracoTechTest\bin\Microsoft.Owin.dll
 C:\inetpub\wwwroot\UmbracoTechTest\UmbracoTechTest\UmbracoTechTest\bin\businesslogic.dll
-C:\inetpub\wwwroot\UmbracoTechTest\UmbracoTechTest\UmbracoTechTest\bin\Umbraco.Core.dll
 C:\inetpub\wwwroot\UmbracoTechTest\UmbracoTechTest\UmbracoTechTest\bin\interfaces.dll
 C:\inetpub\wwwroot\UmbracoTechTest\UmbracoTechTest\UmbracoTechTest\bin\cms.dll
 C:\inetpub\wwwroot\UmbracoTechTest\UmbracoTechTest\UmbracoTechTest\bin\umbraco.DataLayer.dll
