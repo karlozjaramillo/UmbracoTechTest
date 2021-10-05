@@ -1,9 +1,8 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-@using ContentModels = Umbraco.Web.PublishedContentModels;
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
 @{
-    Layout = "Layout.cshtml";
-    var newItem = Model.Content;
-    var image = Model.Content.GetPropertyValue<string>("image");
+    Layout = "~/Views/Layout.cshtml";
+    var newItem = Model;
+    var image = Model.GetPropertyValue<string>("image");
     var title = newItem.GetPropertyValue("title");
     var summary = newItem.GetPropertyValue("summary");
     var author = newItem.GetPropertyValue("author");
@@ -13,8 +12,9 @@
 }
 
 <article class="brick entry format-standard" style="margin: 0 100px">
+    <h1>Welcome to NewsItem</h1>
     <div class="entry-thumb">
-        <a href="@newItem.Url" class="thumb-link"><img src="@url" /></a>
+        <a href="@newItem.Url" class="thumb-link"><img src="@url"/></a>
     </div>
     <div class="entry-text">
         <div class="entry-header">
@@ -28,7 +28,7 @@
         </div>
         <div>
             <p style="text-align-last: end;">Author: @author</p>
-            <a href="/" style="color: black"><img src="~/images/leftArrow.png" alt="Back to Home" width="50px" /></a>
+            <a href="/" style="color: black"><img src="~/images/leftArrow.png" alt="Back to Home" width="50px"/></a>
         </div>
     </div>
 </article>
