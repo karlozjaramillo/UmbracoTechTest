@@ -1,0 +1,8 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = "~/Views/Layout.cshtml";
+}
+<section style="margin: 0 100px">
+    <h1>Welcome to Home</h1>
+    @Html.GetGridHtml(Model, "gridLayoutHome")
+</section>
