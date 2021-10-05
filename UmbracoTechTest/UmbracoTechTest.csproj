@@ -1636,6 +1636,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\SubscribeController.cs" />
     <Compile Include="Models\Subscribe.cs">
       <DependentUpon>SubscribeModel.tt</DependentUpon>
@@ -1902,7 +1903,6 @@
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Layout.cshtml" />
     <Content Include="Views\MacroPartials\MyNew.cshtml" />
-    <Content Include="Views\News.cshtml" />
     <Content Include="Views\NewItem.cshtml" />
     <Content Include="Views\MacroPartials\ListNews.cshtml" />
     <Content Include="Views\MacroPartials\PrimaryNews.cshtml" />
@@ -1919,6 +1919,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\MacroPartials\News.cshtml" />
     <Content Include="Views\AboutUs\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
