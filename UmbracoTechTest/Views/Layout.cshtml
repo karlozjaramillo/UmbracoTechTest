@@ -1,6 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = null;
+    var site = Model.Content.Site();
+    //var node = site.Site();
+    //var node = Umbraco.TypedContent(site);
+    var selection = site.Children.Where(x => x.IsVisible());
 }
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
@@ -13,7 +17,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Akademy – Umbraco Tech Test</title>
+    <title>Akademy – Umbraco Tech Test - @Model.Content.Name</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -56,10 +60,17 @@
 
             <nav id="main-nav-wrap">
                 <ul class="main-navigation sf-menu">
-                    <li class="current"><a href="/" title="">Home</a></li>
-                    <li><a href="/news/" title="">News</a></li>
-                    <li><a href="/about-us/" title="">About Us</a></li>
+                    <li class="@Html.Raw(Model.Content.Id == site.Id ? "current" : "")"><a href="@site.Url()" title="">@site.Name</a></li>
+                    @foreach (var item in selection)
+                    {
+                        <li class="@(item.IsAncestorOrSelf(Model.Content) ? "current" : null)"><a href="@item.Url()">@item.Name</a></li>
+                    }
                 </ul>
+                @*<ul class="main-navigation sf-menu">
+                        <li class="current"><a href="/" title="">Home</a></li>
+                        <li><a href="/news/" title="">News</a></li>
+                        <li><a href="/about-us/" title="">About Us</a></li>
+                    </ul>*@
             </nav> <!-- end main-nav-wrap -->
 
             <div class="search-wrap">
@@ -100,9 +111,14 @@
                     <h4>Site Links</h4>
 
                     <ul>
-                        <li><a href="/" class="whiteFont">Home</a></li>
-                        <li><a href="/news/">News</a></li>
-                        <li><a href="/about-us/">About Us</a></li>
+                        <li class="@Html.Raw(Model.Content.Id == site.Id ? "current" : "")"><a href="@site.Url()" title="">@site.Name</a></li>
+                        @foreach (var item in selection)
+                        {
+                            <li class="@(item.IsAncestorOrSelf(Model.Content) ? "current" : null)"><a href="@item.Url()">@item.Name</a></li>
+                        }
+                        @*<li><a href="/" class="whiteFont">Home</a></li>
+                            <li><a href="/news/">News</a></li>
+                            <li><a href="/about-us/">About Us</a></li>*@
                     </ul>
 
                 </div> <!-- end site-links -->
